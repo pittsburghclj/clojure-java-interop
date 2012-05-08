@@ -99,12 +99,14 @@
     (.put "far" (Integer. 10)))
   (.judgeCloseness simple guesses))
 
-;;; Clojure is written in Java...
-(map :name (:members (cr/reflect (Simple.))))
+;;; Scratch
+(defn methods- [thing]
+  (sort (map :name (:members (cr/reflect thing)))))
+
 (cr/reflect [])
+(methods- {})
 (supers (class []))
 (first (:members (cr/reflect [])))
-(:bases (cr/reflect []))
 
 (defn constructors [type]
   (for [f (seq (:members (cr/reflect type)))
@@ -112,6 +114,5 @@
                 (:parameter-types f)
                 (not (:return-type f)))]
     (:parameter-types f)))
+
 (constructors [])
-;(class clojure.lang.PersistentVector/EMPTY)
-;(clojure.lang.PersistentVector. 0 5 clojure.lang.PersistentVector/EMPTY (object-array 0))
