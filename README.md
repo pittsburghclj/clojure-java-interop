@@ -5,6 +5,12 @@
 - Benjamin R. Haskell
 - benizi([.com](http://benizi.com)) [GitHub](https://github.com/benizi)
 
+## Useful references:
+
+[Clojure Java Interop page](http://clojure.org/java_interop)
+
+[Blog entry on Java Interop](http://blog.jayfields.com/2011/12/clojure-java-interop.html)
+
 ## Prep:
 
 ```shell

@@ -25,7 +25,7 @@
 
 (.toUpperCase "asdf")
 
-(let [myobj (Simple.)]
+(let [myobj (Simple. 7)]
   (.approximatePi myobj))
 
 (comment (.instanceMember Classname args*))
@@ -106,6 +106,7 @@
 (cr/reflect [])
 (methods- {})
 (supers (class []))
+(supers (class {}))
 (first (:members (cr/reflect [])))
 
 (defn constructors [type]
